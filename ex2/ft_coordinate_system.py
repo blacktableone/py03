@@ -2,9 +2,11 @@
 
 import math
 
-def get_player_pos()-> tuple[float, float, float]:
+
+def get_player_pos() -> tuple[float, float, float]:
     while True:
-        coordinates = input("Enter new coordinates as floats in format 'x,y,z':")
+        coordinates = input(
+            "Enter new coordinates as floats in format 'x,y,z':")
 
         values = coordinates.split(",")
         if len(values) != 3:
@@ -31,6 +33,7 @@ def get_player_pos()-> tuple[float, float, float]:
 
         return (x, y, z)
 
+
 print("=== Game Coordinate System ===")
 
 print("\nGet a first set of coordinates")
@@ -51,6 +54,6 @@ second = get_player_pos()
 distance = math.sqrt(
     (first[0] - second[0]) ** 2
     + (first[1] - second[1]) ** 2
-    + (first[2] -second[2]) ** 2
+    + (first[2] - second[2]) ** 2
 )
 print(f"Distance between the 2 sets of coordinates: {distance:.4f}")
